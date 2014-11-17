@@ -1,16 +1,19 @@
- 
-function crateNewBook(e){
+function createNewBook(e){
     var bookName = Document.getElementById("bookName").value;
-    var bookName = Document.getElementById("authorName").value;
-    var bookName = Document.getElementById("score").value;
+    var authorName = Document.getElementById("authorName").value;
+    var score = Document.getElementById("score").value;
     var book = new Book(bookName, authorName, score);
 
     
     var a = document.createElement("li");
-    var b = document.createElement("span");
-    var c = document.getElementById("bookName").value;
+    var b = document.createElement("span").innerHTML = bookName;
+    var c = document.createElement("span").innerHTML = authorName;
+    var d = document.createElement("span").innerHTML = score;
 
-    document.ul.appendChild(a).appendChild(b).getElementById("bookName").innerHTML;// appanding the span and the value?
+
+    document.getElementById("bList").appendChild(a).appendChild(b).appendChild(c).appendChild(d);
+}    
+    
     
 /* el.innerHTML = "Some title";
 document.body.appendChild(el);
@@ -24,7 +27,7 @@ document.body.appendChild(el2);
 
   */  
 
-}
+
 
 
 function restAll(e){
